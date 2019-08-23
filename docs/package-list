@@ -1,0 +1,9 @@
+com.fsaraiva.tinyduel.engine
+com.fsaraiva.tinyduel.engine.gameObjects
+com.fsaraiva.tinyduel.engine.map
+com.fsaraiva.tinyduel.game
+com.fsaraiva.tinyduel.game.characters
+com.fsaraiva.tinyduel.game.scenes
+com.fsaraiva.tinyduel.utils.audio
+com.fsaraiva.tinyduel.utils.gui
+com.fsaraiva.tinyduel.utils.video

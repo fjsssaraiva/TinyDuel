@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "970507947278",
+    "firebase_url": "https://tinyduel.firebaseio.com",
+    "project_id": "tinyduel",
+    "storage_bucket": "tinyduel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970507947278:android:4d951f2ee0591e45",
+        "android_client_info": {
+          "package_name": "com.fsaraiva.tinyduel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970507947278-t3l4ctj2ftsm9fncfuctulrm6g0trk4s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fsaraiva.tinyduel",
+            "certificate_hash": "418b025aa87e818c1c2d83762db33bcf3b9e6c33"
+          }
+        },
+        {
+          "client_id": "970507947278-bl4r6go94crjds4fv4c262qbbtjep9c6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1zzKf7HeqMNH2IYIvVFu2cxRLoBjQA2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970507947278-bl4r6go94crjds4fv4c262qbbtjep9c6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
