@@ -18,6 +18,8 @@ public class Sample
     static int[] sm;
     //static AudioManager amg;
     public static int musicID = -1;
+    public static boolean loaded = false;
+    public static boolean musicPlaying = false;
 
     public static void InitSound(Context c) {
 
@@ -33,8 +35,15 @@ public class Sample
             soundPool = new SoundPool(maxStreams, AudioManager.STREAM_MUSIC, 0);
         }
 
+        soundPool.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
+            @Override
+            public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
+                loaded = true;
+            }
+        });
 
         musicID = -1;
+        musicPlaying = false;
 
         sm = new int[9];
         // fill your sounds
@@ -50,7 +59,7 @@ public class Sample
         //amg = (AudioManager)mContext.getSystemService(Context.AUDIO_SERVICE);
     }
 
-    // todo check if soud is loaded (music not playing)
+    // todo check if sound is loaded (music not playing)
 
     //AssetFileDescriptor aMan.getAssets();
 /*
@@ -76,14 +85,21 @@ public class Sample
     }*/
 
     public static void playSound(int sound) {
-        soundPool.play(sm[sound], 1, 1, 1, 0, 1f);
+        //if (loaded) {
+            soundPool.play(sm[sound], 1, 1, 1, 0, 1f);
+        //}
     }
 
     public static int playSoundLoop(int sound) {
         //musicID = soundPool.play(sm[sound], 1, 1, 1, -1, 1f); //-1 for loop
         //Log.d("SOUND", "start bkg music - " + musicID);
-        musicID = soundPool.play(sm[sound], 1, 1, 1, 0, 1f);
-        return musicID;
+        if (loaded) {
+            musicID = soundPool.play(sm[sound], 1, 1, 1, -1, 1f);
+            musicPlaying = true;
+            return musicID;
+        } else {
+            return -1;
+        }
     }
 
     public static void pauseSound(int sound) {
@@ -92,6 +108,7 @@ public class Sample
 
     public static void pauseMusic() {
         soundPool.pause(musicID);
+        musicPlaying = false;
     }
 
     public static void pauseAll() {

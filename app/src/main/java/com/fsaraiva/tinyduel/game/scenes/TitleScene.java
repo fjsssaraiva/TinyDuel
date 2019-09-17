@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import com.fsaraiva.tinyduel.R;
@@ -84,11 +85,13 @@ public class TitleScene extends Scene {
         anim.setDelay(35);
 
         if (Stage.gameOptions_soundOn) {
-            /*if (Sample.musicID == -1) {
-                Sample.playSoundLoop(6);
-            } else {
-                Sample.resumeMusic();
-            }*/
+            if (!Sample.musicPlaying) {
+                if (Sample.musicID == -1) {
+                    Sample.playSoundLoop(6);
+                } else {
+                    Sample.resumeMusic();
+                }
+            }
         }
         isDirty = true;
     }
@@ -226,6 +229,10 @@ public class TitleScene extends Scene {
         //canvas.drawBitmap(anim.getImage(), anim.src_full, anim.getDrawingBoundsXYZoom(980,305,1), null);
 
         START_WHACK_GAME.draw(canvas);
+
+        String debug = "Musicloaded: " + Sample.loaded + " id:" + Sample.musicID + " play:" + Sample.musicPlaying;
+        Log.d("music: ", debug);
+
         bitmapText.drawString(canvas, "WHACKER", START_WHACK_GAME.x+20, START_WHACK_GAME.y+20, 1);
         START_FIGHT_GAME.draw(canvas);
         bitmapText.drawString(canvas, "GUNFIGHT", START_FIGHT_GAME.x+20, START_FIGHT_GAME.y+20, 1);
