@@ -231,7 +231,7 @@ public class TitleScene extends Scene {
         START_WHACK_GAME.draw(canvas);
 
         String debug = "Musicloaded: " + Sample.loaded + " id:" + Sample.musicID + " play:" + Sample.musicPlaying;
-        Log.d("music: ", debug);
+        //Log.d("music: ", debug);
 
         bitmapText.drawString(canvas, "WHACKER", START_WHACK_GAME.x+20, START_WHACK_GAME.y+20, 1);
         START_FIGHT_GAME.draw(canvas);
