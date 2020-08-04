@@ -1,7 +1,7 @@
 package com.fsaraiva.tinyduel.game;
 
 import android.content.Context;
-import android.util.Log;
+// import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.app.Activity;
@@ -42,7 +42,7 @@ public class MainAppActivity extends Activity {
                 "ca-app-pub-3940256099942544~3347511713");
 
         mInterstitialAd = new InterstitialAd(this);
-        //mInterstitialAd.setAdUnitId("ca-app-pub-6429528320074964/6172590444");
+        //mInterstitialAd.setAdUnitId("ca-app-pub-6429528320074964/6172590444"); //real ID
         mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
@@ -50,7 +50,7 @@ public class MainAppActivity extends Activity {
         mInterstitialAd.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
-                Log.d("ADMOB: ", "closed add, starting new one");
+                // Log.d("ADMOB: ", "closed add, starting new one");
                 AdRequest adRequest = new AdRequest.Builder().addTestDevice("ca-app-pub-3940256099942544/1033173712").build();
                 mInterstitialAd.loadAd(adRequest);
             }

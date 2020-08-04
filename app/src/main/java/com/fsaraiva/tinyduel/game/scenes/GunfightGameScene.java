@@ -7,7 +7,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.util.Log;
+// import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -647,9 +647,9 @@ public class GunfightGameScene extends Scene {
                         if (Stage.gameOptions_adCounter > 2) {
                             if (MainAppActivity.mInterstitialAd.isLoaded()) {
                                 MainAppActivity.mInterstitialAd.show();
-                            } else {
-                                Log.d("TAG", "The interstitial wasn't loaded yet.");
-                            }
+                            } // else {
+                               // Log.d("TAG", "The interstitial wasn't loaded yet.");
+                            // }
                             Stage.gameOptions_adCounter = 0;
                             Stage.snapshotHandler.writeOptions(Stage.context1);
                         }
