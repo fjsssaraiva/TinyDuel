@@ -1,0 +1,7 @@
+# Staging 
+C:\Users\fjsss\Documents\AndroidProjects\TinyDuel>gradlew html:superDev
+http://localhost:8080/index.html
+
+# Production
+# C:\Users\fjsss\Documents\AndroidProjects\TinyDuel>gradlew html:dist
+# cp html/build/dist/* /var/www/*

@@ -1,0 +1,9 @@
+# Staging
+C:\Users\fjsss\Documents\AndroidProjects\TinyDuel>gradlew desktop:run
+
+# Production
+C:\Users\fjsss\Documents\AndroidProjects\TinyDuel>gradlew desktop:dist
+C:\Users\fjsss\Documents\AndroidProjects\TinyDuel\desktop\build\libs>java -jar desktop-1.0.jar
+
+# Packaging
+https://github.com/raeleus/skin-composer/wiki/libGDX-and-JPackage
